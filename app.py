@@ -16,7 +16,7 @@ class ChatHandler(Resource):
                         "content": "This is context"}]
 
     def get(self):
-        print(self.context)
+        print(f'GET 19: {self.context}')
         response = jsonify(context=self.context)
         response.headers.add("Access-Control-Allow-Origin", "*")
         # return {
@@ -27,11 +27,11 @@ class ChatHandler(Resource):
     # @cross_origin()
     def post(self):
         rqs = request.json
-        print(rqs)
+        print(f'POST Print RQS 30 : {rqs}')
         prompt = rqs.get('prompt')
         context = rqs.get('context')
 
-        print(f'{prompt}\n{context}')
+        print(f'POST 34: {prompt}\n{context}')
 
         response = jsonify(collect_messages(prompt, context))
         return response
