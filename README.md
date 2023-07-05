@@ -17,11 +17,20 @@ git clone https://github.com/HarshKakran/FitJoe.git
 ```shell
 cd fitjoe
 ```
-3. Install the backend dependencies:
+3. Create a Python virtual environment:
+```shell
+python3 -m venv env
+```
+4. Activate the virtual environment:
+```shell
+source env/bin/activate
+````
+
+5. Install the backend dependencies:
 ```shell
 pip install -r requirements.txt
 ```
-4. Install the frontend dependencies:
+6. Install the frontend dependencies:
 ```shell
 cd frontend
 npm install
@@ -49,7 +58,7 @@ cd frontend
 npm start
 ```
 4. Open your web browser and visit http://localhost:3000 to access FitJoe.
-5. 
+
 ### How FitJoe Works
 FitJoe leverages the power of the GPT API to generate personalized food suggestions based on user input. It analyzes the user's goals, dietary preferences, and nutritional requirements to provide tailored recommendations. The GPT API understands natural language and can engage in meaningful conversations with users, allowing for an interactive and user-friendly experience.
 
