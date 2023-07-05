@@ -33,8 +33,8 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 def collect_messages(prompt: str, context: list, temperature=0):
     print(f'Collect MSG, 34: {prompt} \n {type(context)}')
     context.append({'role': 'user', 'content': f'{prompt}'})
-    # response = get_completion_from_messages(context, temperature=temperature)
-    response = "HI!!"
+    response = get_completion_from_messages(context, temperature=temperature)
+    # response = "HI!!"
     context.append({'role': 'assistant', 'content': f'{response}'})
 
     return {'context': context}
